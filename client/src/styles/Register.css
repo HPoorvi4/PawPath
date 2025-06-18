@@ -1,0 +1,124 @@
+/* src/styles/Register.css */
+
+.register-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fff8dc 0%, #ffe4b5 100%);
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+  }
+  
+  /* faint paw-print watermark in corner */
+  /* .register-page::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: url('/images/paw-print.svg') no-repeat center/contain;
+    opacity: 0.05;
+    pointer-events: none;
+  } */
+  
+  .register-card {
+    position: relative;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(4px);
+    padding: 3rem 2rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .register-card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #e67e22;
+  }
+  
+  .register-card .error {
+    background: #fdecea;
+    color: #d8000c;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .register-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .register-card input {
+    padding: 0.75rem 1rem;
+    border: 2px solid #f0a040;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .register-card input:focus {
+    outline: none;
+    border-color: #e67e22;
+    box-shadow: 0 0 8px rgba(230, 126, 34, 0.3);
+  }
+  
+  .register-card button {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #e67e22 0%, #cf711f 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+  }
+  
+  .register-card button:hover {
+    background: linear-gradient(135deg, #cf711f 0%, #b45e14 100%);
+    transform: translateY(-2px);
+  }
+  
+  .register-card .redirect {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .register-card .redirect a {
+    color: #e67e22;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .register-card .redirect a:hover {
+    color: #cf711f;
+    text-decoration: underline;
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .register-card {
+      padding: 2rem 1rem 1.5rem;
+    }
+    .register-card h2 {
+      font-size: 1.75rem;
+    }
+    .register-card input,
+    .register-card button {
+      font-size: 0.95rem;
+    }
+  }
+  

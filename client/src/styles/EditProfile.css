@@ -1,0 +1,73 @@
+/* EditProfile.css */
+
+.edit-profile {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Optional watermark */
+/*
+.edit-profile::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background: url('/path/to/pencil-icon.svg') no-repeat center/contain;
+  opacity: 0.08;
+}
+*/
+
+.edit-profile h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #d35400;
+}
+
+.edit-profile form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-profile label {
+  font-weight: 600;
+  color: #333;
+}
+
+.edit-profile input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.edit-profile input:focus {
+  border-color: #d35400;
+  outline: none;
+}
+
+.edit-profile button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ff9f43 0%, #e67e22 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.edit-profile button:hover {
+  background: linear-gradient(135deg, #e58e26 0%, #cf711f 100%);
+  transform: translateY(-2px);
+}

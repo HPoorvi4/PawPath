@@ -1,0 +1,43 @@
+/* VetCard.css */
+.vet-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.vet-card:hover {
+  transform: translateY(-3px);
+}
+
+.vet-info h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2e7d32;
+}
+
+.vet-info p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.vet-card button {
+  background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.vet-card button:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #2e7032 100%);
+  transform: translateY(-2px);
+}

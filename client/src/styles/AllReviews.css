@@ -1,0 +1,51 @@
+/* src/styles/AllReviews.css */
+.all-reviews {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .all-reviews h1 {
+    color: #e67e22;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .rate-us-btn {
+    display: block;
+    margin: 0 auto 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background: #34a853;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .reviews-list {
+    list-style: none;
+    padding: 0;
+  }
+  .reviews-list li {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+  }
+  .rev-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .stars {
+    color: #f1c40f;
+  }
+  .username {
+    font-weight: bold;
+  }
+  .date {
+    margin-left: auto;
+    color: #888;
+    font-size: 0.85rem;
+  }
+  .rev-comment {
+    margin-top: 0.5rem;
+    color: #555;
+  }
+  

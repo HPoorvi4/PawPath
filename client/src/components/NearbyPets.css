@@ -1,0 +1,37 @@
+/* NearbyPets.css */
+
+.nearby-pets {
+    padding: 3rem 2rem;
+    background: #fafafa;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .nearby-pets h2 {
+    font-size: 2rem;
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+  }
+  
+  .nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .see-more {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .see-more:hover {
+    background-color: #0277bd;
+  }
+  

@@ -1,0 +1,89 @@
+/* DocAppointment.css */
+.doc-appointment {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fff8e7 0%, #fff3dc 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Optional paw-print watermark */
+/*
+.doc-appointment::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: url('/path/to/light-paw.svg') no-repeat center/contain;
+  opacity: 0.08;
+}
+*/
+
+.doc-appointment h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #d35400;
+  margin-bottom: 1.5rem;
+}
+
+.date-picker-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.date-picker-section label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.date-picker-section .react-datepicker-wrapper,
+.date-picker-section input {
+  width: auto;
+}
+
+.date-picker-section button {
+  background: linear-gradient(135deg, #ff9f43 0%, #e67e22 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.date-picker-section button:hover {
+  background: linear-gradient(135deg, #e58e26 0%, #cf711f 100%);
+  transform: translateY(-2px);
+}
+
+.vet-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* At larger sizes, two columns */
+@media (min-width: 600px) {
+  .vet-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.no-vets {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #c0392b;
+  font-weight: 600;
+  font-size: 1.1rem;
+}

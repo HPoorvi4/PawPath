@@ -1,0 +1,134 @@
+/* Adopt.css */
+.adopt-page {
+  padding: 3rem 2rem;
+  background: #faf8f5; /* soft off-white */
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Decorative paw-print watermark top-right */
+/*
+.adopt-page::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 80px;
+  height: 80px;
+  background: url('/path/to/paw-print-light.svg') no-repeat center/contain;
+  opacity: 0.1;
+}
+*/
+
+.adopt-page h2 {
+  font-size: 2rem;
+  color: #e67e22;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Custom select styling */
+.search-filters select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23777" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 0.8rem center;
+  background-color: #fff;
+  background-size: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.search-filters select:hover,
+.search-filters select:focus {
+  border-color: #e67e22;
+  outline: none;
+}
+
+/* Search button */
+.search-filters button {
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.search-filters button:hover {
+  background-color: #cf711f;
+  transform: translateY(-1px);
+}
+
+/* Pet cards grid */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding-bottom: 2rem;
+}
+
+/* “No pets found” text */
+.cards-container p {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Decorative bone icon at bottom-left (example) */
+/*
+.cards-container::after {
+  content: "";
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  width: 60px;
+  height: 60px;
+  background: url('/path/to/bone-icon.svg') no-repeat center/contain;
+  opacity: 0.1;
+}
+*/
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .search-filters {
+    padding: 0.8rem;
+  }
+  .search-filters select, .search-filters button {
+    flex: 1 1 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adopt-page {
+    padding: 2rem 1rem;
+  }
+  .search-filters {
+    gap: 0.5rem;
+  }
+  .search-filters select,
+  .search-filters button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}

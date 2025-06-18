@@ -1,0 +1,78 @@
+/* src/styles/Landing.css */
+.landing-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #FFEFBA 0%, #FFFFFF 100%);
+  position: relative;
+  padding: 0 2rem;
+}
+/* .landing-hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: url('/images/paw-watermark.png') no-repeat center/contain;
+  opacity: 0.1;
+  pointer-events: none;
+} */
+
+.landing-content {
+  max-width: 600px;
+  z-index: 1;
+  text-align: left;
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  color: #E67E22;
+  margin-bottom: 0.8rem;
+}
+
+.landing-content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.landing-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn.primary {
+  background: #E67E22;
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #cf711f;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #E67E22;
+  border: 2px solid #E67E22;
+}
+.btn.secondary:hover {
+  background: #E67E22;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .landing-content h1 { font-size: 2.5rem; }
+  .landing-content p  { font-size: 1.1rem; }
+  .btn { width: 100%; text-align: center; }
+}

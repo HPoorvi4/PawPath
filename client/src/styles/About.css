@@ -1,0 +1,32 @@
+/* src/styles/About.css */
+.about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  .about-container h1 {
+    font-size: 2.5rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+  }
+  .about-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.4rem;
+    background-color: #0288d1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  .cta-button:hover {
+    background-color: #0277bd;
+  }
+  

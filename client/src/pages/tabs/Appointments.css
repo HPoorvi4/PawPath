@@ -1,0 +1,74 @@
+/* Appointments.css */
+
+.appointments-section {
+  padding: 1rem 0;
+}
+
+.appointments-section h3 {
+  text-align: center;
+  color: #0288d1;
+  margin-bottom: 1rem;
+}
+
+.appointments-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.appointment-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.appointment-card p {
+  margin: 0;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.actions button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: opacity 0.2s;
+}
+
+.actions button:not(.cancel-btn) {
+  background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
+}
+
+.actions .cancel-btn {
+  background: #e53935;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+}
+
+/* Mobile: stack actions */
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+  }
+}

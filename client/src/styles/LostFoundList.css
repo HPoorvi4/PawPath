@@ -1,0 +1,123 @@
+/* LostFoundList.css */
+
+.lf-list {
+  padding: 3rem 2rem;
+  background: #fdfdf9;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Section wrappers */
+.section {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Headings with accent underline */
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #d35400;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #d35400;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Grid for cards */
+.lf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* “No results” message */
+.empty-msg {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 2rem 0;
+}
+
+/* Search bar (Found section) */
+.found-section .search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Compact inputs */
+.search-bar select,
+.search-bar input {
+  flex: 0 0 140px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.search-bar select:focus,
+.search-bar input:focus {
+  border-color: #d35400;
+  outline: none;
+}
+
+/* Search button */
+.search-bar button {
+  flex: 0 0 auto;
+  background: linear-gradient(135deg, #ff9f43 0%, #e67e22 100%);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.search-bar button:hover {
+  background: linear-gradient(135deg, #e58e26 0%, #cf711f 100%);
+  transform: translateY(-2px);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 800px) {
+  .lf-list {
+    padding: 2rem 1rem;
+  }
+  .search-bar select,
+  .search-bar input {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+  .search-bar button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section h2 {
+    font-size: 1.6rem;
+  }
+  .lf-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .search-bar {
+    gap: 0.5rem;
+  }
+}

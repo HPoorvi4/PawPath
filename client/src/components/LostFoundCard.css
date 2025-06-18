@@ -1,0 +1,68 @@
+/* LostFoundCard.css */
+
+.lf-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Optional corner paw icon */
+/*
+.lf-card::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  background: url('/path/to/paw-icon.svg') no-repeat center/contain;
+  opacity: 0.1;
+}
+*/
+
+.lf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.lf-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 1rem;
+}
+
+.info h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.info p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.info button {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.info button:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #2e7032 100%);
+  transform: translateY(-2px);
+}

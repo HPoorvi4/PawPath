@@ -1,0 +1,133 @@
+/* Home.css */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8rem;
+  background-color: #fff8dc;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 80vh;
+  position: relative;
+}
+
+/* Hero background graphic placeholder: uncomment & set your image */
+/*
+.home-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: url('/path/to/hero-paw.svg') no-repeat center/contain;
+  opacity: 0.2;
+}
+*/
+
+.left-content {
+  max-width: 45%;
+  background: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.left-content h1 {
+  font-size: 3rem;
+  color: #e67e22;
+  margin-bottom: 1rem;
+}
+
+.left-content p {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+  color: #333;
+}
+
+.left-content ul {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+  color: #555;
+  font-size: 1rem;
+}
+
+.register-btn,
+.generate-name .name-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-name {
+  margin-top: 1rem;
+}
+
+.generate-name .name-btn {
+  background-color: #34a853;
+}
+
+.generate-name .name-btn:hover,
+.register-btn:hover {
+  background-color: #cf711f;
+}
+
+.pet-name-result {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.right-image {
+  max-width: 45%;
+  position: relative;
+}
+
+.right-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column-reverse;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+  .left-content,
+  .right-image {
+    max-width: 100%;
+  }
+  .left-content {
+    margin-top: 2rem;
+  }
+  .right-image img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-content h1 {
+    font-size: 2rem;
+  }
+  .left-content p,
+  .left-content ul {
+    font-size: 0.9rem;
+  }
+  .register-btn,
+  .generate-name .name-btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}

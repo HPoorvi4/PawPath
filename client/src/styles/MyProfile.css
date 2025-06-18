@@ -1,0 +1,132 @@
+/* MyProfile.css */
+
+.profile-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff8e7;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #d35400;
+}
+.profile-details p {
+  margin: 0.25rem 0;
+  color: #333;
+}
+
+/* EDIT + LOGOUT BUTTONS */
+.profile-header-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn,
+.logout-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #ff9f43 0%, #e67e22 100%);
+  color: #fff;
+}
+.edit-btn:hover {
+  background: linear-gradient(135deg, #e58e26 0%, #cf711f 100%);
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: #fff;
+}
+.logout-btn:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+  transform: translateY(-2px);
+}
+
+/* TAB BUTTONS CONTAINER */
+.profile-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* INDIVIDUAL TABS */
+.profile-tabs button {
+  flex: 1 1 auto;
+  min-width: 140px;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.profile-tabs button:hover {
+  background: #fcd5a0;
+  color: #333;
+}
+.profile-tabs button.active {
+  background: #e67e22;
+  color: #fff;
+  border-color: #cf711f;
+}
+
+/* TAB CONTENT CARD */
+.profile-tab-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* SLIDE-IN */
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-header-actions {
+    justify-content: center;
+  }
+  .profile-tabs {
+    justify-content: center;
+  }
+  .profile-tabs button {
+    min-width: 100px;
+    font-size: 0.9rem;
+  }
+}

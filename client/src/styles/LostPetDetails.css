@@ -1,0 +1,140 @@
+/* LostPetDetails.css */
+
+.lost-details {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fff8e7 0%, #fff3dc 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Optional background element */
+/*
+.lost-details::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 120px;
+  height: 120px;
+  background: url('/path/to/bone-icon.svg') no-repeat center/contain;
+  opacity: 0.08;
+}
+*/
+
+.lost-details img {
+  flex: 0 0 300px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.details-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.details-info h2 {
+  margin-top: 0;
+  color: #d35400;
+  font-size: 1.8rem;
+}
+
+.details-info p {
+  margin: 0.5rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+.comments-section {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.comments-section h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.comment {
+  padding: 0.8rem 1rem;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.commenter-name {
+  font-weight: bold;
+  margin: 0 0 0.3rem;
+  color: #333;
+}
+
+.comment-text {
+  margin: 0 0 0.5rem;
+  color: #555;
+}
+
+.comment-time {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.comments-section textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.comments-section textarea:focus {
+  border-color: #d35400;
+  outline: none;
+}
+
+.comments-section button {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #ff9f43 0%, #e67e22 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.comments-section button:hover {
+  background: linear-gradient(135deg, #e58e26 0%, #cf711f 100%);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lost-details {
+    padding: 1.5rem;
+  }
+  .lost-details img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "pawpath",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "client": "npm start --prefix client",
+  "server": "nodemon server/index.js",
+  "dev": "concurrently \"npm run server\" \"npm run client\""
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chinmaym6/PawPath.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chinmaym6/PawPath/issues"
+  },
+  "homepage": "https://github.com/Chinmaym6/PawPath#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10"
+  }
+}

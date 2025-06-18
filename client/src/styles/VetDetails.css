@@ -1,0 +1,99 @@
+/* VetDetails.css */
+.vet-details {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Optional faint background graphic */
+/*
+.vet-details::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: url('/path/to/medical-paw.svg') no-repeat center/contain;
+  opacity: 0.05;
+}
+*/
+
+.vet-details h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vet-details p {
+  margin: 0.4rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.slots {
+  margin-top: 1.5rem;
+}
+
+.slots h4 {
+  color: #d35400;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.slot-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.slot-buttons button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #1976d2;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.slot-buttons button.selected,
+.slot-buttons button:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+.confirm-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #0288d1 0%, #0277bd 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #0277bd 0%, #02669b 100%);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slot-buttons {
+    justify-content: center;
+  }
+  .confirm-btn {
+    width: 100%;
+  }
+}

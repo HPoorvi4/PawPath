@@ -1,0 +1,123 @@
+/* Sell.css */
+
+.sell-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #fff8e7 0%, #fff3dc 100%);
+  border: 1px solid #f1e4d6;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Paw-print watermark (uncomment & point to your asset) */
+/*
+.sell-container::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 120px;
+  height: 120px;
+  background: url('/path/to/pawprint-light.svg') no-repeat center/contain;
+  opacity: 0.08;
+}
+*/
+
+.sell-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  color: #d35400;
+  position: relative;
+}
+
+/* Accent underline */
+.sell-container h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #d35400;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.sell-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Inputs & selects */
+.sell-form input[type="text"],
+.sell-form input[type="number"],
+.sell-form select,
+.sell-form textarea,
+.sell-form input[type="file"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0d6c3;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focus state */
+.sell-form input:focus,
+.sell-form select:focus,
+.sell-form textarea:focus {
+  border-color: #d35400;
+  box-shadow: 0 0 0 3px rgba(211,84,0,0.2);
+  outline: none;
+}
+
+/* Submit button */
+.sell-form button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ff9f43 0%, #e67e22 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.sell-form button:hover {
+  background: linear-gradient(135deg, #e58e26 0%, #cf711f 100%);
+  transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .sell-container {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sell-container {
+    padding: 1.5rem 1rem;
+  }
+  .sell-container h2 {
+    font-size: 1.75rem;
+  }
+  .sell-form input[type="text"],
+  .sell-form input[type="number"],
+  .sell-form select,
+  .sell-form textarea,
+  .sell-form input[type="file"] {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  .sell-form button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}

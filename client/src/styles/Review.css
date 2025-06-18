@@ -1,0 +1,48 @@
+/* src/styles/ReviewsHome.css */
+.reviews-home {
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .reviews-home h1 {
+    color: #e67e22;
+    margin-bottom: 1rem;
+  }
+  .reviews-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  .review-card {
+    min-width: 250px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .stars {
+    color: #f1c40f;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .comment {
+    font-style: italic;
+    margin: 0.5rem 0;
+  }
+  .username {
+    text-align: right;
+    color: #555;
+  }
+  .view-all-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background: #0288d1;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  

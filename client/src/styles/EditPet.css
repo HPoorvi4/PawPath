@@ -1,0 +1,77 @@
+/* EditPet.css */
+
+.edit-pet-form {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f2fa 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Optional watermark */
+/*
+.edit-pet-form::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: url('/path/to/pawprint.svg') no-repeat center/contain;
+  opacity: 0.05;
+}
+*/
+
+.edit-pet-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+.edit-pet-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-pet-form input,
+.edit-pet-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.edit-pet-form input:focus,
+.edit-pet-form textarea:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+.edit-pet-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.edit-pet-form button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.3s;
+}
+
+.edit-pet-form button:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #2e7032 100%);
+  transform: translateY(-2px);
+}
