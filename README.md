@@ -48,12 +48,42 @@
 
 ### 🔹 Clone the Repository
 
-
+```bash
 git clone https://github.com/Chinmaym6/PawPath.git
 cd PawPath
 
-###🔹 Set Up the Backend
+### 🔹 Set Up the Backend
+
 ```bash
 cd backend
 npm install
+
+### 🔹 Create a .env file in backend/
+
+```bash
+PORT=5000
+JWT_SECRET=your_jwt_secret
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_NAME=pawpath
+
+### 🔹 Start Backend Server
+
+```bash
+node index.js
+
+### 🔹 Set Up the Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+
+### 🔹 Visit the App
+Open your browser and navigate to:
+
+```bash
+http://localhost:300
 
