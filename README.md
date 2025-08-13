@@ -80,7 +80,7 @@ node index.js
 
 ### 🔹 Set Up the Frontend
 ```bash
-cd frontend
+cd client
 npm install
 npm start
 ```
