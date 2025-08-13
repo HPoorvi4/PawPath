@@ -57,7 +57,7 @@ cd PawPath
 ### 🔹 Set Up the Backend
 
 ```bash
-cd backend
+cd server
 npm install
 ```
 
