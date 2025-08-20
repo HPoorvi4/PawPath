@@ -57,7 +57,7 @@ cd PawPath
 ### 🔹 Set Up the Backend
 
 ```bash
-cd backend
+cd server
 npm install
 ```
 
@@ -80,7 +80,7 @@ node index.js
 
 ### 🔹 Set Up the Frontend
 ```bash
-cd frontend
+cd client
 npm install
 npm start
 ```
