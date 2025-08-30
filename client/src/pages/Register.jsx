@@ -9,21 +9,25 @@ export default function Register() {
     email: "",
     password: "",
     phone: "",
-    location: ""
+    location: "",
   });
   const [err, setErr] = useState("");
   const navigate = useNavigate();
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        formData
+      );
       if (res.data.success) {
         localStorage.setItem("userId", res.data.userId);
+        localStorage.setItem("token", res.data.token);
         navigate("/home");
       } else {
         setErr(res.data.message);
@@ -39,16 +43,40 @@ export default function Register() {
         <h2>Create an Account</h2>
         {err && <div className="error">{err}</div>}
         <form onSubmit={handleSubmit}>
-          <input name="name" placeholder="Name" onChange={handleChange} required />
-          <input name="email" type="email" placeholder="Email" onChange={handleChange} required />
-          <input name="password" type="password" placeholder="Password" onChange={handleChange} required />
-          <input name="phone" placeholder="Phone (optional)" onChange={handleChange} />
-          <input name="location" placeholder="Location (optional)" onChange={handleChange} />
+          <input
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="phone"
+            placeholder="Phone (optional)"
+            onChange={handleChange}
+          />
+          <input
+            name="location"
+            placeholder="Location (optional)"
+            onChange={handleChange}
+          />
           <button type="submit">Register</button>
         </form>
         <p className="redirect">
-          Already have an account?{" "}
-          <Link to="/login">Login here</Link>
+          Already have an account? <Link to="/login">Login here</Link>
         </p>
       </div>
     </div>
