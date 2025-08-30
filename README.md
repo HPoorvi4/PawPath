@@ -6,7 +6,7 @@
 
 ## 🚀 Features
 
-- 🔐 Secure User Authentication
+- 🔐 Secure User Authentication using jwt
 - 🐶 Pet Listings for Adoption (Add, View, Search)
 - 📍 Lost & Found Pet Reporting with Location Search
 - 🏥 Vet Clinic and Doctor Appointment Booking
