@@ -9,12 +9,16 @@ export default function Login() {
   const [err, setErr] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+      const res = await axios.post("http://localhost:5000/api/auth/login", {
+        email,
+        password,
+      });
       if (res.data.success) {
         localStorage.setItem("userId", res.data.userId);
+        localStorage.setItem("token", res.data.token);
         navigate("/home");
       } else {
         setErr(res.data.message);
@@ -34,21 +38,20 @@ export default function Login() {
             type="email"
             placeholder="Email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
             type="password"
             placeholder="Password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
           <button type="submit">Login</button>
         </form>
         <p className="redirect">
-          Don’t have an account?{" "}
-          <Link to="/register">Register here</Link>
+          Don't have an account? <Link to="/register">Register here</Link>
         </p>
       </div>
     </div>
